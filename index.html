@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> -->
+  <title>걱정거리는 변기통에</title>
+  <link href="flush.css" rel="stylesheet" type="text/css" />
+
+  <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+    crossorigin="anonymous"></script>
+
+  <script src="flush.js"></script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Dongle&display=swap');
+
+    * {
+      font-family: "Dongle", sans-serif;
+      cursive !important;
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    .back {
+      background-image: url("flush.jpg");
+    }
+  </style>
+
+</head>
+
+
+
+<body>
+  <!-- 클래스 이름 채우기 : 전체 뼈대 감싸기 -->
+  <div class="wrap">
+    <!-- 클래스 이름 채우기 : 양끝 세로 정렬 -->
+    <div class="item-between">
+      <h2 style="font-size: 3rem; text-shadow: 1px 1px 0 black;">걱정거리는 변기통에</h2>
+      <!-- 클래스 이름 채우기 : 가운데 세로 정렬 -->
+      <div id="subtitles" class="item-center">
+        <div style="text-shadow: 1px 1px 0 black;">답 안 나오는 고민들은 모두 변기통에 넣어버리세요</div>
+        <div style="text-shadow: 1px 1px 0 black;">물이 내려가면 잊는 거예요 :)</div>
+      </div>
+      <!-- 클래스 이름 채우기 : 달 외부 뼈대 -->
+      <div class="moon">
+        <!-- 클래스 이름 채우기 : 달 이미지 -->
+        <div class="front"></div>
+        <!-- 클래스 이름 채우기 : 얼굴 이미지 -->
+        <div class="back"></div>
+      </div>
+      <!-- 클래스 이름 채우기 : 가운데 세로 정렬 -->
+      <div class="iten-center">
+
+        <!-- 클래스 이름 채우기 : 가로 정렬 -->
+        <div id="msg-form" class="iten-row">
+          <!-- 클래스 이름 채우기 : 입력 공간 -->
+          <input id="nickname" type="text" class="submit-input" style="width: 4rem; margin-right: 0.5rem;"
+            placeholder="닉네임" required>
+          <!-- 클래스 이름 채우기 : 소원빌기 버튼 -->
+          <button id="submit-btn" class="submit-button" onclick="sendMessage()">물 내리기</button>
+        </div>
+        <div>
+          <!-- 클래스 이름 채우기 : 입력 공간 -->
+          <textarea id="message" type="text" class="submit-input" placeholder="변기통에 넣어버릴 고민을 적어주세요" required></textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 클래스 이름 채우기 : 편지 -->
+  <div class="letter"></div>
+
+
+
+</body>
+
+</html>

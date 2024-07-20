@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Stylish&display=swap');
+
+@keyframes rotateClockwise {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(720deg);
+        /* 2 full circles */
+    }
+}
+
+.rotate {
+    animation: rotateClockwise 2s linear;
+    /* Adjust the duration as needed */
+}
+
+
+html,
+div,
+button,
+input,
+textarea {
+    font-family: 'Stylish', sans-serif;
+}
+
+body {
+    background-image: url('washroom.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+input {
+    border: none;
+    text-align: center;
+    width: 12rem !important;
+}
+
+button {
+    width: 7rem !important;
+}
+
+input:focus-visible {
+    outline: 1px #e8343e;
+}
+
+textarea {
+    width: 20rem !important;
+    height: 12rem !important;
+    border: none;
+}
+
+textarea::placeholder {
+    font-size: 1rem;
+    text-align: center;
+    line-height: 10rem;
+}
+
+textarea:focus-visible {
+    outline: none;
+}
+
+button {
+    height: 2.3rem;
+    margin: 0 0.5rem;
+    box-shadow: none;
+    border: none;
+}
+
+.wrap {
+    width: 100%;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.item-center {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.item-between {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.item-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.moon {
+    width: 20rem;
+    height: 20rem;
+    position: relative;
+    overflow: hidden;
+
+    margin: 1rem;
+}
+
+.front {
+    width: 20rem;
+    height: 20rem;
+    /* background-color: black; */
+    background-image: url("toliet.jpeg");
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 0;
+    z-index: 3;
+
+    transform: rotateY(0deg);
+    transition: ease-in-out all .4s;
+}
+
+
+.back {
+    width: 12rem;
+    height: 12rem;
+    /* background-color: grey; */
+    background-image: url('flush.jpg');
+    background-position: center;
+    background-size: cover;
+    opacity: 0.5;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 3.5rem;
+    left: 4rem;
+    z-index: 4;
+
+    transform: rotateY(-180deg);
+    transition: ease-in-out all .4s;
+
+    display: none;
+
+}
+
+.moon.flip>.front {
+    z-index: 1;
+    transform: rotateY(180deg);
+}
+
+.moon.flip>.back {
+    /* z-index: 5; */
+
+    transform: rotateY(0deg);
+}
+
+#msg-form {
+    margin: 1rem;
+}
+
+.submit-input {
+    width: 10rem;
+    height: 2rem;
+}
+
+.submit-btn {
+    background-color: #e8343e;
+    color: white;
+    margin: 0 0 0 1rem !important;
+}
+
+.overflow {
+    overflow: hidden;
+}
+
+
+
+.letter {
+    width: 5rem;
+    height: 3rem;
+
+    background-image: url('https://s3.ap-northeast-2.amazonaws.com/materials.spartacodingclub.kr/monthlycoding/2309_moonwish/mail.png');
+    background-position: center;
+    background-size: cover;
+
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    font-size: 3rem;
+    z-index: 5;
+
+    display: none;
+}
+
+
+.parabola {
+    animation: parabola 1s forwards;
+    opacity: 1;
+    transform-origin: center;
+}
+
+
+@keyframes parabola {
+    0% {
+        transform: translate(-40%, 0%);
+        width: 5rem;
+        height: 3rem;
+    }
+
+    100% {
+        transform: translate(-40%, -1500%);
+        width: 0.5rem;
+        height: 0.3rem;
+        top: 50%;
+    }
+}
+
+.moon_screen {
+    width: 100%;
+    height: 100vh;
+
+    background-image: url('../../static/moonwish/scc-style-sheet.css');
+    background-position: center;
+    background-size: cover;
+}
+
+.text_screen {
+    width: 50%;
+    height: 60vh;
+
+}
+
+#hub-link {
+    text-align: center;
+    width: 20rem !important;
+    background: none;
+    color: yellow;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+#hub-link {
+    background-color: orange;
+    color: white;
+}
+
+.item-center>div {
+    width: 20rem !important;
+}
